@@ -5,6 +5,7 @@ import pandas as pd
 
 
 application  = Flask(__name__)
+app = application
 model   = pickle.load(open('model.pkl', 'rb'))
 
 @application.route('/')
