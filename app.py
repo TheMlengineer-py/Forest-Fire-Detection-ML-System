@@ -4,16 +4,16 @@ import numpy as np
 import pandas as pd 
 
 
-application  = Flask(__name__)
-app = application
+app = Flask(__name__)
+
 model   = pickle.load(open('model.pkl', 'rb'))
 
-@application.route('/')
+@app.route('/')
 def home():
     return render_template('index.html')
 
 
-@application.route('/predict_api',methods=['POST'])
+@app.route('/predict_api',methods=['POST'])
 def predict_api():
 
     data=request.json['data']
@@ -28,7 +28,7 @@ def predict_api():
         output = 'no fire'
     return jsonify(output)
 
-@application.route('/predict',methods=['POST'])
+@app.route('/predict',methods=['POST'])
 def predict():
 
     data=[float(x) for x in request.form.values()]
@@ -48,4 +48,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    application.run(debug=True)
+    app.run(debug=True)
