@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd 
 
 
-app = Flask(__name__,template_folder='template')
+app = Flask(__name__,template_folder='Templates')
 
 model   = pickle.load(open('model.pkl', 'rb'))
 
