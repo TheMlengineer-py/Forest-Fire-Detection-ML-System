@@ -13,7 +13,7 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/predict_api',methods=['POST', 'GET'])
+@app.route('/predict_api',methods=['POST'])
 def predict_api():
 
     data=request.json['data']
@@ -28,7 +28,7 @@ def predict_api():
         output = 'no fire'
     return jsonify(output)
 
-@app.route('/predict',methods=['POST', 'GET'])
+@app.route('/predict',methods=['POST'])
 def predict():
 
     data=[float(x) for x in request.form.values()]
