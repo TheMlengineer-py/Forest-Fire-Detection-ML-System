@@ -2,6 +2,7 @@
 Forest Fire Detection 
 
 The machine learning model was trained on the Algeria forest fire dataset collected over two regions in Algeria.
+
 SUPPORT VECTOR MACHINE DEPLOYMENT
 The machine learning model deployment life cycle was explained in this section. The model was saved by dumping support vector machine in the python pickle library, support vector machine was deployed into production(Heroku cloud computing infrastructure server) using Flask micro-web framework by creating a code pipeline which connects GitHub repository holding the development files with the Heroku production infrastructure where the application is hosted remotely on the free dynos which serves as a container for the web-based application and performs real time prediction for up to 1000hours monthly, when the dynos does not receive a web request in a 30-minute period, it sleeps to save up hosting hours. Application slug size of 142.1MiB of 500MiB and Python/Heroku as the buildpacks
 The application main directory consists of the following files.
