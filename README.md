@@ -1,10 +1,16 @@
 # flask-deploy
 Forest Fire Detection 
 
-The machine learning model was trained on the Algeria forest fire dataset collected over two regions in Algeria.
+The Support vector machine learning model was trained on 4 features of the Algeria forest fire dataset collected over two regions in Algeria.
+Temperature, Realtive Humidity, Windspeed and rainfall.
+Training accuracy: 93%
+wall-time :2ms
+Overall mean accuracy: 91.8%
+Standard deviation : 0.0745
 
 SUPPORT VECTOR MACHINE DEPLOYMENT
 The machine learning model deployment life cycle was explained in this section. The model was saved by dumping support vector machine in the python pickle library, support vector machine was deployed into production(Heroku cloud computing infrastructure server) using Flask micro-web framework by creating a code pipeline which connects GitHub repository holding the development files with the Heroku production infrastructure where the application is hosted remotely on the free dynos which serves as a container for the web-based application and performs real time prediction for up to 1000hours monthly, when the dynos does not receive a web request in a 30-minute period, it sleeps to save up hosting hours. Application slug size of 142.1MiB of 500MiB and Python/Heroku as the buildpacks
+
 The application main directory consists of the following files.
 i. Templates folder which holds file named index.html which serves as frontend of the application made up of boostrap, css and html codes. Basically, it serves as the homepage of the application.
 ii. gitiignore file holds an extensive list of untracked files which are to be ignored during the production process by Git
@@ -16,3 +22,6 @@ vii. Procfile which provides the web process type during the production, it spec
 viii. requirements.txt file listing all the dependencies for the web-based application development.
 ix. Runtime.txt contains the python version for the application development.
 All the files listed were pushed to GitHub repository from which a code pipeline connecting the development files to the Heroku cloud server was created.
+
+link to the web-based application
+https://flask--prediction.herokuapp.com/
