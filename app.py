@@ -44,7 +44,7 @@ def predict():
         val_ = 'no'
         output = 'no fire'
 
-    return render_template('index.html', prediction_text="Model Predict : {0}, there is {1}.".format(val_, output))
+    return render_template('index.html', prediction_text="Forest Fire Prediction : {0}, there is {1}.".format(val_, output))
 
 
 if __name__ == "__main__":
