@@ -105,3 +105,5 @@ License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 For any questions or support, please open an issue in the repository or contact me directly at dayo.dataengineer@gmail.com.
+
+link to application: https://flask--prediction.herokuapp.com/
